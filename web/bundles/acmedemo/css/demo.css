@@ -1,0 +1,196 @@
+body, ul {
+    font-size: 14px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    padding:0;
+    margin:0;
+}
+h1.title {
+    font-size: 45px;
+    padding-bottom: 30px;
+}
+.sf-reset h2 {
+    font-weight:   bold;
+    color:         #FFFFFF;
+    /* Font is duplicated of body (sans-serif) */
+    font-family:      "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+
+    margin-bottom:    10px;
+    background-color: #aacd4e;
+    padding:          2px 4px;
+    display:          inline-block;
+    text-transform:   uppercase;
+
+}
+p {
+    line-height:    20px;
+    padding-bottom: 20px;
+}
+#symfony-header {
+    position: relative;
+    padding: 30px 30px 20px 30px;
+}
+.sf-reset .symfony-blocks-welcome {
+    overflow: hidden;
+}
+.sf-reset .symfony-blocks-welcome > div {
+    background-color: whitesmoke;
+    float:            left;
+    width:            240px;
+    margin-right:     14px;
+    text-align:       center;
+    padding:          26px 20px;
+}
+.sf-reset .symfony-blocks-welcome > div.block-demo {
+    margin-right: 0;
+}
+.sf-reset .symfony-blocks-welcome .illustration {
+    padding-bottom: 20px;
+}
+.sf-reset .symfony-blocks-help {
+    overflow: hidden;
+}
+.sf-reset .symfony-blocks-help {
+    margin-top: 30px;
+    padding:    18px;
+    border:     1px solid #E6E6E6;
+}
+.sf-reset .symfony-blocks-help > div {
+    width:        254px;
+    float:        left;
+}
+.flash-message {
+    padding: 10px;
+    margin: 5px;
+    margin-top: 15px;
+    background-color: #ffe;
+}
+.sf-reset .error {
+    color: red;
+}
+#login label, #contact_form label {
+    display: block;
+    float: left;
+    width: 90px;
+}
+.sf-reset ul#menu {
+    float: right;
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+.sf-reset #menu li {
+    padding-left: 0;
+    margin-right: 10px;
+    display: inline;
+}
+.sf-reset a,
+.sf-reset li a {
+    color: #08C;
+    text-decoration: none;
+}
+.sf-reset a:hover,
+.sf-reset li a:hover {
+    color: #08C;
+    text-decoration: underline;
+}
+.sf-reset .symfony-content pre {
+    white-space: pre;
+    font-family: monospace;
+}
+#header {
+    height: 100px;
+    background-color: saddlebrown;
+}
+#content {
+    height: 530px;
+    background-color: burlywood;
+}
+#footer {
+    height: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+#logo-text {
+    width: 400px;
+    padding-left: 100px;
+    padding-top: 50px;
+    float: left;
+}
+#header a {
+    text-decoration: none;
+    color: white;
+}
+#header .active {
+    color: #0088CC;
+}
+.light-blue {
+    color: #4444dd;
+}
+#header ul {
+    padding-top: 30px;
+}
+#header li {
+    list-style: none;
+    float: left;
+    margin-left: 30px;
+}
+#info-block {
+    float:left;
+    width:400px;
+    height:150px;
+    margin-left:150px;
+}
+#info-block ul {
+    list-style-type: decimal;
+}
+#info-block li {
+    padding-top: 15px;
+}
+#timer-block {
+    padding-top:30px;
+    width: 400px;
+    height: 100px;
+    margin-left:650px;
+    border: 1px solid darkgrey;
+    background-color: white;
+}
+#timer-block-text {
+    padding-left:30px;
+}
+#timer-time {
+    text-align: center;
+    font-size: 40px;
+}
+#content {
+    padding-top:50px;
+}
+#form {
+    height: 300px;
+    width: 900px;
+    margin-top:50px;
+    margin-left:130px;
+}
+#form-labels {
+    float:left;
+    width:200px;
+}
+#form-labels li {
+    padding-top:4px;
+}
+#form-inputs {
+    float:left;
+}
+#form-content {
+    padding-left:200px;
+    padding-top:70px;
+}
+#save-button {
+    margin-left:50px;
+    margin-top:50px;
+    width:70px;
+    height:30px;
+}
+#user-form, #survey-form {
+    float:left;
+    display:none;
+}
