@@ -1,37 +1,20 @@
-{% extends "TwigBundle::layout.html.twig" %}
-
-{% block head %}
     <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
+
+    <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/datepicker.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/layout.css') }}" />
     <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/demo.css') }}" />
-{% endblock %}
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/style.css') }}" />
 
-{% block title 'Demo Bundle' %}
+    {#<script src="http://code.jquery.com/jquery-1.9.1.js"></script>#}
+    {#<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>#}
+    <script src="{{ asset('bundles/acmedemo/js/jquery.min.js') }}" ></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="{{ asset('bundles/acmedemo/js/jquery.cookie.js') }}" ></script>
+    <script src="{{ asset('bundles/acmedemo/js/app.js') }}" ></script>
+    <script src="{{ asset('bundles/acmedemo/js/user.js') }}" ></script>
+    <script src="{{ asset('bundles/acmedemo/js/survey.js') }}" ></script>
 
-{% block body %}
-    {% for flashMessage in app.session.flashbag.get('notice') %}
-        <div class="flash-message">
-            <em>Notice</em>: {{ flashMessage }}
-        </div>
-    {% endfor %}
-
-    {% block content_header %}
-        <ul id="menu">
-            {% block content_header_more %}
-                <li><a href="{{ path('_demo') }}">Demo Home</a></li>
-            {% endblock %}
-        </ul>
-
-        <div style="clear: both"></div>
+    {% block content %}
     {% endblock %}
 
-    <div class="block">
-        {% block content %}{% endblock %}
-    </div>
-
-    {% if code is defined %}
-        <h2>Code behind this page</h2>
-        <div class="block">
-            <div class="symfony-content">{{ code|raw }}</div>
-        </div>
-    {% endif %}
-{% endblock %}

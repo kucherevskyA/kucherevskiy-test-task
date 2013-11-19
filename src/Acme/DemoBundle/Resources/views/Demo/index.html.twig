@@ -1,14 +1,70 @@
 {% extends "AcmeDemoBundle::layout.html.twig" %}
 
-{% block title "Symfony - Demos" %}
-
-{% block content_header '' %}
+{#{% block title "Symfony - test_task" %}#}
+{##}
+{#{% block content_header '' %}#}
 
 {% block content %}
-    <h1 class="title">Available demos</h1>
-    <ul id="demo-list">
-        <li><a href="{{ path('_demo_hello', {'name': 'World'}) }}">Hello World</a></li>
-        <li><a href="{{ path('_demo_secured_hello', {'name': 'World'}) }}">Access the secured area</a> <a href="{{ path('_demo_login') }}">Go to the login page</a></li>
-        {# <li><a href="{{ path('_demo_contact') }}">Send a Message</a></li> #}
-    </ul>
+<div id="header" >
+    <div id="logo-text">
+        FANCY SURVEY
+    </div>
+    <div>
+        <ul>
+            <li><a href="#" class="active">HAPPY TESTERS</a></li>
+            <li><a href="#">STATUS</a></li>
+            <li><a href="#">INVITE FRIENDS</a></li>
+            <li><a href="#">TODAY'S SURVEY</a></li>
+        </ul>
+    </div>
+</div>
+<div id="content">
+    <div id="blocks">
+        <div id="info-block">
+            <span class="light-blue">GETTING YOUR</span> AWESOME PRIZE IS EASY!
+            <ul>
+                <li>Sing up and complete a survey</li>
+                <li>Tell us more about yourself</li>
+                <li>Get an awesome prize!</li>
+            </ul>
+        </div>
+        <div id="timer-block">
+            <div id="timer-block-text">Time remaining to complete your task</div>
+            <div id="timer-time">
+                <span id="time" class="light-blue"></span> SECONDS
+            </div>
+        </div>
+    </div>
+        <div id="form">
+            {{ form_start(userForm) }}
+            {{ form_errors(userForm) }}
+
+            {{ form_row(userForm.firstName) }}
+            {{ form_row(userForm.secondName) }}
+            {{ form_row(userForm.email) }}
+            <!-- тут я решил не мучаться с фронтом и прицепить datepicker -->
+            {{ form_row(userForm.birthday) }}
+            {{ form_row(userForm.shoeSize) }}
+            <input type="button" id="user-save-button" value="SAVE">
+            {{ form_end(userForm) }}
+
+            {{ form_start(surveyForm) }}
+            {{ form_errors(surveyForm) }}
+
+            {{ form_row(surveyForm.iceCream) }}
+            {{ form_row(surveyForm.superHero) }}
+            {{ form_row(surveyForm.movieStar) }}
+            <!-- тут я решил не мучаться с фронтом и прицепить datepicker -->
+            {{ form_row(surveyForm.worldEndTime) }}
+            {{ form_row(surveyForm.winner) }}
+            <input type="button" id="survey-save-button" value="SAVE">
+            {{ form_end(surveyForm) }}
+            <div id='finish'>CONGRATULATIONS, YOU DID IT!
+                <div id='rand-gif'></div>
+            </div>
+            <input type="hidden" name="random-gif" value={{ randomGif }}>
+        </div>
+    </div>
+<div id="footer"> footer</div>
+
 {% endblock %}

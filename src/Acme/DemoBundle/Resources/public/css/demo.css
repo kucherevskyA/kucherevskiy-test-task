@@ -99,3 +99,7 @@ ul#demo-list a {
     white-space: pre;
     font-family: monospace;
 }
+
+#header {
+    height: 300px;
+}
